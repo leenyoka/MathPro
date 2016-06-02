@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/chalkboard">
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="200dp">
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:id="@+id/hostessPlotGeo" />
+    </HorizontalScrollView>
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="Plot Shape"
+            android:id="@+id/btnPlotShapeGeoPage" />
+    </LinearLayout>
+</LinearLayout>

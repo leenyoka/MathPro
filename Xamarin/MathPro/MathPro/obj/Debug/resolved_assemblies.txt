@@ -1,0 +1,2 @@
+C:\Development\Android\Education\MathPro\MathPro\bin\Debug\MathPro.dll
+C:\Development\Education\MathPro\MathBase\Bin\Debug\MathBase.dll

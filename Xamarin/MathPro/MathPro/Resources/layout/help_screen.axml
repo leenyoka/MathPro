@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@+id/help_left"
+        android:layout_width="20dp"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/help_left"
+        android:layout_centerVertical="true"
+        android:layout_height="30dp" />
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:padding="20dp"
+        android:layout_height="fill_parent">
+        <ImageView
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:src="#FFFFFF"
+            android:id="@+id/help_image"
+            android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="20dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/help_right"
+        android:id="@+id/help_right"
+        android:layout_centerVertical="true"
+        android:layout_height="30dp" />
+    <Button
+        android:id="@+id/help_demo"
+        android:layout_width="wrap_content"
+        android:text="Demo"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/help_count"
+        android:layout_width="wrap_content"
+        android:text="1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

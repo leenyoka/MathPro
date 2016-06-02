@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{411AE35A-73D3-4F08-B1C2-33AD0D340C76}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MathPro</RootNamespace>
+    <AssemblyName>MathPro</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AndroidLinkSkip>
+    </AndroidLinkSkip>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <AndroidSupportedAbis>armeabi-v7a,x86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions>
+    </AndroidStoreUncompressedFileExtensions>
+    <MandroidI18n>
+    </MandroidI18n>
+    <JavaMaximumHeapSize>
+    </JavaMaximumHeapSize>
+    <JavaOptions>
+    </JavaOptions>
+    <MonoDroidExtraArgs>
+    </MonoDroidExtraArgs>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <BundleAssemblies>False</BundleAssemblies>
+    <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MathBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\MathBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builders\BuilderDisplayArea.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Help.cs" />
+    <Compile Include="Menu\AlgebraMenu.cs" />
+    <Compile Include="Builders\ExponentialBuilderPage.cs" />
+    <Compile Include="Builders\InequalitiesBuilderPage.cs" />
+    <Compile Include="Builders\LogarithmicBuilderPage.cs" />
+    <Compile Include="Builder\Builder.cs" />
+    <Compile Include="Builder\ExponentialBuilder.cs" />
+    <Compile Include="Builder\InequalitiesBuilder.cs" />
+    <Compile Include="Builder\Keyboard.cs" />
+    <Compile Include="Builder\LogarithimsBuilder.cs" />
+    <Compile Include="Display\DisplayEngine.cs" />
+    <Compile Include="Display\Step.cs" />
+    <Compile Include="Display\TermUtility.cs" />
+    <Compile Include="Display\ViewExponentialSolution.cs" />
+    <Compile Include="Display\ViewExpoTerm.cs" />
+    <Compile Include="Display\ViewExpression.cs" />
+    <Compile Include="Display\ViewFactorDistributeSolution.cs" />
+    <Compile Include="Display\ViewInequalitiesSolution.cs" />
+    <Compile Include="Display\ViewLogarithmicSolution.cs" />
+    <Compile Include="Display\ViewLogTerm.cs" />
+    <Compile Include="Display\ViewPlayerItem.cs" />
+    <Compile Include="Display\ViewSign.cs" />
+    <Compile Include="Display\ViewSimpificationSolution.cs" />
+    <Compile Include="Display\ViewSolveForXSolution.cs" />
+    <Compile Include="Display\ViewTerm.cs" />
+    <Compile Include="Menu\EquationsMenu.cs" />
+    <Compile Include="Geometry\GeometryMenu.cs" />
+    <Compile Include="Geometry\GeometryPlotter.cs" />
+    <Compile Include="Geometry\PlotGeoShape.cs" />
+    <Compile Include="Geometry\PointView.cs" />
+    <Compile Include="Geometry\TransformationGeoPage.cs" />
+    <Compile Include="Graphs\FilledPolygon.cs" />
+    <Compile Include="Graphs\GraphsMenu.cs" />
+    <Compile Include="Graphs\GraphBuilder.cs" />
+    <Compile Include="Graphs\MathGraphs.cs" />
+    <Compile Include="Graphs\EnterStraightOrCurve.cs" />
+    <Compile Include="Graphs\StraighLine.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Builder\MainActivity.cs" />
+    <Compile Include="Menu\MainMenu.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SolutionPlayer.cs" />
+    <Compile Include="SplashScreen.cs" />
+    <Compile Include="Zoom\ZoomZ.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\Player.axml" />
+    <AndroidResource Include="Resources\layout\Algebra_Menu.axml" />
+    <AndroidResource Include="Resources\layout\Equations_Menu.axml" />
+    <AndroidResource Include="Resources\layout\Main_Menu.axml" />
+    <AndroidResource Include="Resources\layout\Straight_line.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Geometry_Menu.axml" />
+    <AndroidResource Include="Resources\layout\PlotGeoShape.axml" />
+    <AndroidResource Include="Resources\layout\Graphs_View.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Graphs_Menu.axml" />
+    <AndroidResource Include="Resources\layout\Transformation_Geo.axml" />
+    <AndroidResource Include="Resources\layout\help_screen.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\setting_screen.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\SplashView.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\styles.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\drawable\sec.png" />
+    <AndroidResource Include="Resources\drawable\sin.png" />
+    <AndroidResource Include="Resources\drawable\SmallerOrEqual.png" />
+    <AndroidResource Include="Resources\drawable\smallerthan.png" />
+    <AndroidResource Include="Resources\drawable\T.png" />
+    <AndroidResource Include="Resources\drawable\tan.png" />
+    <AndroidResource Include="Resources\drawable\termMultiply.png" />
+    <AndroidResource Include="Resources\drawable\U.png" />
+    <AndroidResource Include="Resources\drawable\undo.png" />
+    <AndroidResource Include="Resources\drawable\V.png" />
+    <AndroidResource Include="Resources\drawable\W.png" />
+    <AndroidResource Include="Resources\drawable\X.png" />
+    <AndroidResource Include="Resources\drawable\A.png" />
+    <AndroidResource Include="Resources\drawable\ArrowDown.png" />
+    <AndroidResource Include="Resources\drawable\ArrowLeft.png" />
+    <AndroidResource Include="Resources\drawable\ArrowRight.png" />
+    <AndroidResource Include="Resources\drawable\ArrowUp.png" />
+    <AndroidResource Include="Resources\drawable\B.png" />
+    <AndroidResource Include="Resources\drawable\boarder.png" />
+    <AndroidResource Include="Resources\drawable\C.png" />
+    <AndroidResource Include="Resources\drawable\closeBrace.png" />
+    <AndroidResource Include="Resources\drawable\closeBraceSquare.png" />
+    <AndroidResource Include="Resources\drawable\cos.png" />
+    <AndroidResource Include="Resources\drawable\cosec.png" />
+    <AndroidResource Include="Resources\drawable\cot.png" />
+    <AndroidResource Include="Resources\drawable\Cursor.png" />
+    <AndroidResource Include="Resources\drawable\D.png" />
+    <AndroidResource Include="Resources\drawable\divide.png" />
+    <AndroidResource Include="Resources\drawable\E.png" />
+    <AndroidResource Include="Resources\drawable\equal.png" />
+    <AndroidResource Include="Resources\drawable\F.png" />
+    <AndroidResource Include="Resources\drawable\G.png" />
+    <AndroidResource Include="Resources\drawable\greaterOrEqual.png" />
+    <AndroidResource Include="Resources\drawable\greaterthan.png" />
+    <AndroidResource Include="Resources\drawable\H.png" />
+    <AndroidResource Include="Resources\drawable\I.png" />
+    <AndroidResource Include="Resources\drawable\J.png" />
+    <AndroidResource Include="Resources\drawable\K.png" />
+    <AndroidResource Include="Resources\drawable\L.png" />
+    <AndroidResource Include="Resources\drawable\Line.png" />
+    <AndroidResource Include="Resources\drawable\Log.png" />
+    <AndroidResource Include="Resources\drawable\LongDivision.png" />
+    <AndroidResource Include="Resources\drawable\M.png" />
+    <AndroidResource Include="Resources\drawable\minus.png" />
+    <AndroidResource Include="Resources\drawable\multiply.png" />
+    <AndroidResource Include="Resources\drawable\N.png" />
+    <AndroidResource Include="Resources\drawable\O.png" />
+    <AndroidResource Include="Resources\drawable\openBrace.png" />
+    <AndroidResource Include="Resources\drawable\openBraceSquare.png" />
+    <AndroidResource Include="Resources\drawable\or.png" />
+    <AndroidResource Include="Resources\drawable\P.png" />
+    <AndroidResource Include="Resources\drawable\plus.png" />
+    <AndroidResource Include="Resources\drawable\plusMinus.png" />
+    <AndroidResource Include="Resources\drawable\Q.png" />
+    <AndroidResource Include="Resources\drawable\R.png" />
+    <AndroidResource Include="Resources\drawable\root.png" />
+    <AndroidResource Include="Resources\drawable\S.png" />
+    <AndroidResource Include="Resources\drawable\border.png" />
+    <AndroidResource Include="Resources\drawable\cartesian_plane.png" />
+    <AndroidResource Include="Resources\drawable\chalkboard.jpg" />
+    <AndroidResource Include="Resources\drawable\deleteIcon.png" />
+    <AndroidResource Include="Resources\drawable\Triangle.png" />
+    <AndroidResource Include="Resources\drawable\TriangleNintyAngle.png" />
+    <AndroidResource Include="Resources\drawable\Eight.png" />
+    <AndroidResource Include="Resources\drawable\Five.png" />
+    <AndroidResource Include="Resources\drawable\Four.png" />
+    <AndroidResource Include="Resources\drawable\Nine.png" />
+    <AndroidResource Include="Resources\drawable\One.png" />
+    <AndroidResource Include="Resources\drawable\Seven.png" />
+    <AndroidResource Include="Resources\drawable\Six.png" />
+    <AndroidResource Include="Resources\drawable\Three.png" />
+    <AndroidResource Include="Resources\drawable\Two.png" />
+    <AndroidResource Include="Resources\drawable\Zero.png" />
+    <AndroidResource Include="Resources\drawable\cartesian_plane_2.png" />
+    <AndroidResource Include="Resources\drawable\ApplicationIcon.png" />
+    <AndroidResource Include="Resources\drawable\splashscreenimage.jpg" />
+    <AndroidResource Include="Resources\drawable\help_1.jpg" />
+    <AndroidResource Include="Resources\drawable\help_2.jpg" />
+    <AndroidResource Include="Resources\drawable\help_3.jpg" />
+    <AndroidResource Include="Resources\drawable\help_4.jpg" />
+    <AndroidResource Include="Resources\drawable\help_5.jpg" />
+    <AndroidResource Include="Resources\drawable\help_6.jpg" />
+    <AndroidResource Include="Resources\drawable\help_7.jpg" />
+    <AndroidResource Include="Resources\drawable\help_8.jpg" />
+    <AndroidResource Include="Resources\drawable\help_9.jpg" />
+    <AndroidResource Include="Resources\drawable\help_right.png" />
+    <AndroidResource Include="Resources\drawable\help_left.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

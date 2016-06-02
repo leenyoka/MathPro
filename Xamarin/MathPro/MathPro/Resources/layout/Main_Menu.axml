@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/chalkboard">
+    <ScrollView
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent">
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/hostess">
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:text="Equations"
+                android:id="@+id/btnMainEquaions" />
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:text="Graphs"
+                android:id="@+id/btnMainGraphs" />
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:text="Geometry"
+                android:id="@+id/btnMainGeometry" />
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:text="Help"
+                android:id="@+id/btnMainHelp" />
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:text="Settings"
+                android:id="@+id/btnMainSettings" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+C:\Development\Android\Education\MathPro-Android\MathPro\MathPro\obj\Release\android\assets\MathPro.dll
+C:\Development\Android\Education\MathPro-Android\MathPro\MathPro\obj\Release\android\assets\MathBase.dll
+C:\Development\Android\Education\MathPro-Android\MathPro\MathPro\obj\Release\android\assets\Mono.Android.dll
+C:\Development\Android\Education\MathPro-Android\MathPro\MathPro\obj\Release\android\assets\mscorlib.dll
+C:\Development\Android\Education\MathPro-Android\MathPro\MathPro\obj\Release\android\assets\System.Core.dll
+C:\Development\Android\Education\MathPro-Android\MathPro\MathPro\obj\Release\android\assets\System.dll

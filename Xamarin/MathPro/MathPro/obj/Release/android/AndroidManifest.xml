@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.mathpro.mathpro" android:versionCode="3" android:versionName="1.1" android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="12" />
+  <application android:label="MathPro" android:icon="@drawable/applicationicon" android:name="mono.android.app.Application">
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md5b6766f5b397001a7818161c3ca2f913a.Settings" />
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md5b6766f5b397001a7818161c3ca2f913a.Help" />
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md52435a595c3976c4bd0d64497915c699e.AlgebraMenu" />
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md556a45b1bc06c1b4d148be68af8141cf8.ExponentialBuilderPage" />
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md556a45b1bc06c1b4d148be68af8141cf8.InequalitiesBuilderPage" />
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md556a45b1bc06c1b4d148be68af8141cf8.LogarithmicBuilderPage" />
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md52435a595c3976c4bd0d64497915c699e.EquationsMenu" />
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md527c904322b351a284526e6badeef1953.GeometryMenu" />
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md527c904322b351a284526e6badeef1953.GeometryPlotter" />
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md527c904322b351a284526e6badeef1953.PlotGeoShape" />
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md527c904322b351a284526e6badeef1953.TransformationGeoPage" />
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md53313e26110785687c6c932abb95bf65e.GraphsMenu" />
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md53313e26110785687c6c932abb95bf65e.GraphBuilder" />
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md527c904322b351a284526e6badeef1953.EnterStraightOrCurve" />
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md53313e26110785687c6c932abb95bf65e.StraighLine" />
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md5fda53050355db345e21e0fd2464125b0.MainActivity" />
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md52435a595c3976c4bd0d64497915c699e.MainMenu" />
+    <activity android:icon="@drawable/icon" android:label="MathPro" android:name="md5b6766f5b397001a7818161c3ca2f913a.SolutionPlayer" />
+    <activity android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/Theme.Splash" android:name="md5b6766f5b397001a7818161c3ca2f913a.SplashScreen">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.mathpro.mathpro.mono.MonoRuntimeProvider.__mono_init__" />
+  </application>
+</manifest>

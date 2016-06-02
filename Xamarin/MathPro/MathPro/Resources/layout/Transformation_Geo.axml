@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/chalkboard">
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="200dp">
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:id="@+id/hostessPlotGeo" />
+    </HorizontalScrollView>
+    <LinearLayout
+        android:padding="2dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Added:"
+            android:textColor="#FFFFFF"
+            android:id="@+id/txtAdded" />
+        <LinearLayout
+            android:padding="2dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="Transformation Type" />
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="Relfection"
+                    android:id="@+id/rdReflection"
+                    android:checked="true" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/rdRotation"
+                    android:text="Rotation" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/rdTranslation"
+                    android:text="Translation" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/rdEnlargement"
+                    android:text="Enlargement" />
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="2dp"
+            android:id="@+id/panelReflection"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="Reflection Type" />
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="X-Axis"
+                    android:id="@+id/rdXAxis"
+                    android:checked="true" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/rdYAxis"
+                    android:text="Y-Axis" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/rdXequalsY"
+                    android:text="X = Y" />
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="2dp"
+            android:visibility="gone"
+            android:id="@+id/panelRotation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+        <LinearLayout
+            android:padding="2dp"
+            android:visibility="gone"
+            android:id="@+id/panelEnlargement"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="Enlargement Factor" />
+            <EditText
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:id="@+id/txtEnlargement"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:text="0" />
+        </LinearLayout>
+        <LinearLayout
+            android:padding="2dp"
+            android:visibility="gone"
+            android:id="@+id/panelTranslation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="Enlargement Factor" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="Vertical" />
+                <EditText
+                    android:layout_width="40dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/txtVertical"
+                    android:inputType="number"
+                    android:textColor="#FFFFFF"
+                    android:text="0" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="Horizontal" />
+                <EditText
+                    android:layout_width="40dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/txtHorizontal"
+                    android:inputType="number"
+                    android:textColor="#FFFFFF"
+                    android:text="0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="Add Transformation"
+            android:id="@+id/btnAddTransformation" />
+    </LinearLayout>
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="Plot Shape"
+            android:id="@+id/btnPlotShapeGeoPage" />
+    </LinearLayout>
+</LinearLayout>
