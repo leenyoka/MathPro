@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{41427F35-90FD-4E4B-8A17-ABC8E88148C5}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MathPro</RootNamespace>
+    <AssemblyName>MathPro</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>MathPro.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>MathPro.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604" />
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch" />
+    <Reference Include="PdfSharp-WP7">
+      <HintPath>..\..\Linda\Linda\PDF\PdfSharp-WP7-1.3.1-bin\PdfSharp-WP7.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="mscorlib.extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Capture\Capturer.cs" />
+    <Compile Include="DisplayEngine\DisplayEngine.cs" />
+    <Compile Include="Geometry\GeometryProblemBuilder.xaml.cs">
+      <DependentUpon>GeometryProblemBuilder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Geometry\PlotGeometricShape.xaml.cs">
+      <DependentUpon>PlotGeometricShape.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Geometry\PointView.cs" />
+    <Compile Include="Geometry\TransformationGeometry.cs" />
+    <Compile Include="Geometry\TransformationGeometrySolutionViewer.xaml.cs">
+      <DependentUpon>TransformationGeometrySolutionViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphs\MathGraphBuilder.xaml.cs">
+      <DependentUpon>MathGraphBuilder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphs\MathGraphs.cs" />
+    <Compile Include="Graphs\MathGraphViewer.xaml.cs">
+      <DependentUpon>MathGraphViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphs\Parabola.xaml.cs">
+      <DependentUpon>Parabola.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Graphs\Straight.xaml.cs">
+      <DependentUpon>Straight.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Help.xaml.cs">
+      <DependentUpon>Help.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\BasicAlgebra.xaml.cs">
+      <DependentUpon>BasicAlgebra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\EquationsMenu.xaml.cs">
+      <DependentUpon>EquationsMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\GeometryMenu.xaml.cs">
+      <DependentUpon>GeometryMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\GraphMenu.xaml.cs">
+      <DependentUpon>GraphMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProblemBuilder\BasicCalculator.xaml.cs">
+      <DependentUpon>BasicCalculator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProblemBuilder\Builder.cs" />
+    <Compile Include="ProblemBuilder\ExponentialBuilderViewer.xaml.cs">
+      <DependentUpon>ExponentialBuilderViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProblemBuilder\InequalitiesBuilderViewer.xaml.cs">
+      <DependentUpon>InequalitiesBuilderViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProblemBuilder\Keyboard.cs" />
+    <Compile Include="ProblemBuilder\LogarithmicBuilderViewer.xaml.cs">
+      <DependentUpon>LogarithmicBuilderViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsAssistant.cs" />
+    <Compile Include="SolutionViewer\BasicSolutionPlayer.xaml.cs">
+      <DependentUpon>BasicSolutionPlayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SupportPages\SavedOrNew.xaml.cs">
+      <DependentUpon>SavedOrNew.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Trigonometry\RightAngledTriangle.xaml.cs">
+      <DependentUpon>RightAngledTriangle.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Geometry\GeometryProblemBuilder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Geometry\PlotGeometricShape.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Geometry\TransformationGeometrySolutionViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphs\MathGraphBuilder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphs\MathGraphViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphs\Parabola.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Graphs\Straight.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Help.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\BasicAlgebra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\EquationsMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\GeometryMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\GraphMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProblemBuilder\BasicCalculator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProblemBuilder\ExponentialBuilderViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProblemBuilder\InequalitiesBuilderViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProblemBuilder\LogarithmicBuilderViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SolutionViewer\BasicSolutionPlayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SupportPages\SavedOrNew.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Trigonometry\RightAngledTriangle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\chalkboard-background.jpg" />
+    <Resource Include="Images\MathToolSet\0.png" />
+    <Resource Include="Images\MathToolSet\1.png" />
+    <Resource Include="Images\MathToolSet\2.png" />
+    <Resource Include="Images\MathToolSet\3.png" />
+    <Resource Include="Images\MathToolSet\4.png" />
+    <Resource Include="Images\MathToolSet\5.png" />
+    <Resource Include="Images\MathToolSet\6.png" />
+    <Resource Include="Images\MathToolSet\7.png" />
+    <Resource Include="Images\MathToolSet\8.png" />
+    <Resource Include="Images\MathToolSet\9.png" />
+    <Resource Include="Images\MathToolSet\A.png" />
+    <Resource Include="Images\MathToolSet\B.png" />
+    <Resource Include="Images\MathToolSet\C.png" />
+    <Resource Include="Images\MathToolSet\closeBrace.png" />
+    <Resource Include="Images\MathToolSet\closeBraceSquare.png" />
+    <Resource Include="Images\MathToolSet\cos.png" />
+    <Resource Include="Images\MathToolSet\cosec.png" />
+    <Resource Include="Images\MathToolSet\cot.png" />
+    <Resource Include="Images\MathToolSet\D.png" />
+    <Resource Include="Images\MathToolSet\divide.png" />
+    <Resource Include="Images\MathToolSet\E.png" />
+    <Resource Include="Images\MathToolSet\equal.png" />
+    <Resource Include="Images\MathToolSet\F.png" />
+    <Resource Include="Images\MathToolSet\G.png" />
+    <Resource Include="Images\MathToolSet\greaterOrEqual.png" />
+    <Resource Include="Images\MathToolSet\greaterthan.png" />
+    <Resource Include="Images\MathToolSet\H.png" />
+    <Resource Include="Images\MathToolSet\I.png" />
+    <Resource Include="Images\MathToolSet\J.png" />
+    <Resource Include="Images\MathToolSet\K.png" />
+    <Resource Include="Images\MathToolSet\L.png" />
+    <Resource Include="Images\MathToolSet\Line.png" />
+    <Resource Include="Images\MathToolSet\Log.png" />
+    <Resource Include="Images\MathToolSet\M.png" />
+    <Resource Include="Images\MathToolSet\minus.png" />
+    <Resource Include="Images\MathToolSet\multiply.png" />
+    <Resource Include="Images\MathToolSet\N.png" />
+    <Resource Include="Images\MathToolSet\O.png" />
+    <Resource Include="Images\MathToolSet\openBrace.png" />
+    <Resource Include="Images\MathToolSet\openBraceSquare.png" />
+    <Resource Include="Images\MathToolSet\P.png" />
+    <Resource Include="Images\MathToolSet\plus.png" />
+    <Resource Include="Images\MathToolSet\plusMinus.png" />
+    <Resource Include="Images\MathToolSet\Q.png" />
+    <Resource Include="Images\MathToolSet\R.png" />
+    <Resource Include="Images\MathToolSet\root.png" />
+    <Resource Include="Images\MathToolSet\S.png" />
+    <Resource Include="Images\MathToolSet\sec.png" />
+    <Resource Include="Images\MathToolSet\sin.png" />
+    <Resource Include="Images\MathToolSet\smallerOrEqual.png" />
+    <Resource Include="Images\MathToolSet\smallerthan.png" />
+    <Resource Include="Images\MathToolSet\T.png" />
+    <Resource Include="Images\MathToolSet\tan.png" />
+    <Resource Include="Images\MathToolSet\termMultiply.png" />
+    <Resource Include="Images\MathToolSet\U.png" />
+    <Resource Include="Images\MathToolSet\V.png" />
+    <Resource Include="Images\MathToolSet\W.png" />
+    <Resource Include="Images\MathToolSet\X.png" />
+    <Resource Include="Images\MathToolSet\or.png" />
+    <Resource Include="Images\MathToolSet\LongDivision.png" />
+    <Resource Include="Images\MathToolSet\ArrowDown.png" />
+    <Resource Include="Images\MathToolSet\ArrowLeft.png" />
+    <Resource Include="Images\MathToolSet\ArrowRight.png" />
+    <Resource Include="Images\MathToolSet\ArrowUp.png" />
+    <Resource Include="Images\MathToolSet\boarder.png" />
+    <Resource Include="Images\MathToolSet\Cursor.png" />
+    <Resource Include="Images\MathToolSet\undo.png" />
+    <Resource Include="Images\lg-Cartesian-Plane-0-24-not-numbered-.png" />
+    <Resource Include="Images\Help\Picture1.jpg" />
+    <Resource Include="Images\Help\Picture10.jpg" />
+    <Resource Include="Images\Help\Picture11.jpg" />
+    <Resource Include="Images\Help\Picture12.jpg" />
+    <Resource Include="Images\Help\Picture2.jpg" />
+    <Resource Include="Images\Help\Picture3.jpg" />
+    <Resource Include="Images\Help\Picture4.jpg" />
+    <Resource Include="Images\Help\Picture5.jpg" />
+    <Resource Include="Images\Help\Picture6.jpg" />
+    <Resource Include="Images\Help\Picture7.jpg" />
+    <Resource Include="Images\Help\Picture8.jpg" />
+    <Resource Include="Images\Help\Picture9.jpg" />
+    <Resource Include="Images\deleteIcon.png" />
+    <Resource Include="Images\border.png" />
+    <Resource Include="Images\cartesian_plane.png" />
+    <Resource Include="Images\Triangle.png" />
+    <Resource Include="Images\TriangleNintyAngle.png" />
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MathBase\MathBase.csproj">
+      <Project>{E779D998-BFC5-4180-86AA-F4FE3BAFDB5F}</Project>
+      <Name>MathBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>

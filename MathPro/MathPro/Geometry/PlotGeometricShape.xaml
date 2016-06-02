@@ -1,0 +1,46 @@
+﻿<phone:PhoneApplicationPage xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"  
+    x:Class="MathPro.Geometry.PlotGeometricShape"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Landscape" Orientation="Landscape"
+    mc:Ignorable="d" d:DesignHeight="480" d:DesignWidth="800"
+    shell:SystemTray.IsVisible="False">
+
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/MathPro;component/Images/chalkboard-background.jpg" Stretch="UniformToFill" />
+        </Grid.Background>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,20,12,0">
+            <toolkit:WrapPanel>
+                <!--<TextBlock Margin="12,0,0,0" Foreground="White" Text="Please enter points below [format (x;y), (x;y)]"></TextBlock>-->
+                <TextBlock Margin="12,0,0,0" Foreground="White" Text="Please enter points below "></TextBlock>
+
+                <!--<TextBox BorderBrush="White" Name="txtPoints" Height="70" Width="780" ></TextBox>-->
+
+                <ListBox Name="PointsList" ScrollViewer.HorizontalScrollBarVisibility="Auto"  Width="780" Height="200">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+                
+                <Button BorderBrush="White" Foreground="White" Name="btnScetch" Width="250" Click="btnScetch_Click" Content="Plot"/>
+            </toolkit:WrapPanel>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

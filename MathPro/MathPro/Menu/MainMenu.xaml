@@ -1,0 +1,85 @@
+﻿<phone:PhoneApplicationPage xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"  
+    x:Class="MathPro.Menu.MainMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Landscape" Orientation="Landscape"
+    mc:Ignorable="d" d:DesignHeight="480" d:DesignWidth="800"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="ContentPanel" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="755*" />
+                <ColumnDefinition Width="21*" />
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <ImageBrush ImageSource="/MathPro;component/Images/chalkboard-background.jpg" Stretch="UniformToFill" />
+            </Grid.Background>
+
+            <Grid Name="viewOptions" Visibility="Collapsed" Margin="32,82,0,0">
+                <ListBox>
+                    <Button  BorderBrush="White"  Foreground="White" Click="btnBasicCalculator_Click" Name="btnBasicCalculator"  Content="Basic Calculator" Width="734"></Button>
+                    <Button  BorderBrush="White"  Foreground="White" Click="btnEquations_Click" Name="btnEquations"  Content="Equations" Width="734"></Button>
+                    <Button  BorderBrush="White"  Foreground="White" Click="btnGraphs_Click" Name="btnGraphs" Content="Graphs/Functions" Width="734"></Button>
+                    <Button  BorderBrush="White"  Foreground="White" Click="btnGeometry_Click" Name="btnGeometry" Content="Geometry" Width="734"></Button>
+                    <Button  BorderBrush="White"  Foreground="White" Click="btnHelp_Click" Name="btnHelp" Content="Help" Width="734"></Button>
+                </ListBox>
+            </Grid>
+            <Grid Name="viewReview" Visibility="Collapsed" Margin="32,82,0,0">
+                <Grid Background="Black" Opacity=".4"></Grid>
+                <toolkit:WrapPanel>
+                    <TextBlock Foreground="White" Text="                      Thank you for using MathPro" FontSize="29"></TextBlock>
+                    <TextBlock Foreground="White" Text="           We hope you are learning and having fun " FontSize="29"></TextBlock>
+                    <TextBlock Foreground="White" Text="                We really would love your feedback " FontSize="29"></TextBlock>
+                    <TextBlock Foreground="White" Text="            Please take some time to review our app " FontSize="29"></TextBlock>
+
+                    <TextBlock Text="                                                        " FontSize="29"></TextBlock>
+                   
+                    <Button Width="340" Foreground="White" Name="btnReview" Content="Review" Click="btnReview_Click"></Button>
+                    <Button Width="340" Foreground="White" Name="btnNoThanks" Click="btnNoThanks_Click" Content="No Thanks"></Button>
+
+                </toolkit:WrapPanel>
+            </Grid>
+            <Grid Name="viewThanks" Visibility="Visible" Margin="32,82,0,0">
+                <Grid Background="Black" Opacity=".4"></Grid>
+                <ListBox> 
+                <TextBlock Foreground="White" Text="               Thank you for downloading MathPro" FontSize="29"></TextBlock>
+                <TextBlock Foreground="White" Text="                    We hope you enjoy using it :)" FontSize="29"></TextBlock>
+                    <TextBlock Text=" " FontSize="29"></TextBlock>
+                    <TextBlock Text=" " FontSize="29"></TextBlock>
+                    <TextBlock Text=" " FontSize="29"></TextBlock>
+                    <TextBlock Text=" " FontSize="29"></TextBlock>
+                    <Button Width="740" Foreground="White" Name="btnContinue" Content="Continue" Click="btnContinue_Click"></Button>
+
+                </ListBox>
+            </Grid>
+
+
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,8 @@
+C:\Users\Linda\Desktop\MathPro\MathBase\Bin\Release\MathBase.dll
+C:\Users\Linda\Desktop\MathPro\MathBase\Bin\Release\MathBase.pdb
+C:\Users\Linda\Desktop\MathPro\MathBase\obj\Release\MathBase.dll
+C:\Users\Linda\Desktop\MathPro\MathBase\obj\Release\MathBase.pdb
+C:\Development\Education\MathPro\MathBase\Bin\Release\MathBase.dll
+C:\Development\Education\MathPro\MathBase\Bin\Release\MathBase.pdb
+C:\Development\Education\MathPro\MathBase\obj\Release\MathBase.dll
+C:\Development\Education\MathPro\MathBase\obj\Release\MathBase.pdb

@@ -1,0 +1,7 @@
+C:\Users\Linda\Desktop\MathPro\DisplayEngine\Bin\Debug\DisplayEngine.dll
+C:\Users\Linda\Desktop\MathPro\DisplayEngine\Bin\Debug\DisplayEngine.pdb
+C:\Users\Linda\Desktop\MathPro\DisplayEngine\Bin\Debug\MathBase.dll
+C:\Users\Linda\Desktop\MathPro\DisplayEngine\Bin\Debug\MathBase.pdb
+C:\Users\Linda\Desktop\MathPro\DisplayEngine\obj\Debug\DisplayEngine.csprojResolveAssemblyReference.cache
+C:\Users\Linda\Desktop\MathPro\DisplayEngine\obj\Debug\DisplayEngine.dll
+C:\Users\Linda\Desktop\MathPro\DisplayEngine\obj\Debug\DisplayEngine.pdb

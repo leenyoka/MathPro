@@ -1,0 +1,62 @@
+﻿<phone:PhoneApplicationPage xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"  
+    x:Class="MathPro.ProblemBuilder.BasicCalculator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Landscape" Orientation="Landscape"
+    mc:Ignorable="d" d:DesignHeight="480" d:DesignWidth="800"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/MathPro;component/Images/chalkboard-background.jpg" />
+        </Grid.Background>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock Foreground="White" FontSize="30" Height="40" Margin="240,-400,0,0" Text="Basic(Term Calculator)" />
+            
+            
+            
+                
+                <toolkit:ListPicker   Name="coefficient1" Margin="107,171,619,219"
+                                    ListPickerMode="Full"  Width="50" Height="60">
+
+                </toolkit:ListPicker>
+
+            <toolkit:ListPicker Height="60" ListPickerMode="Full" Margin="163,171,563,219" Name="base1" Width="50" />
+            <toolkit:ListPicker Height="60" ListPickerMode="Full" Margin="219,134,507,256" Name="power1" Width="50" />
+            <toolkit:ListPicker Height="90" ListPickerMode="Full" Margin="354,186,372,204" Name="sign" Width="50" />
+            <toolkit:ListPicker Name ="coefficient2" Height="60" ListPickerMode="Full" Margin="469,186,257,234"  Width="50" />
+            <toolkit:ListPicker Height="60" ListPickerMode="Full" Margin="525,186,201,234" Name="base2" Width="50" />
+            <toolkit:ListPicker Height="60" ListPickerMode="Full" Margin="581,149,145,271" Name="power2" Width="50" />
+
+
+            <toolkit:WrapPanel Margin="30,395,42,6" Name="board" >
+                <Button BorderBrush="White" Foreground="White"  Name="btnGo" Content="Calculate" Width="706" Height="72" Click="btnGo_Click"></Button>
+            </toolkit:WrapPanel>
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

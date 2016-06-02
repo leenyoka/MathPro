@@ -1,0 +1,8 @@
+C:\Users\Linda\Desktop\MathPro\MathBase\Bin\Debug\MathBase.dll
+C:\Users\Linda\Desktop\MathPro\MathBase\Bin\Debug\MathBase.pdb
+C:\Users\Linda\Desktop\MathPro\MathBase\obj\Debug\MathBase.dll
+C:\Users\Linda\Desktop\MathPro\MathBase\obj\Debug\MathBase.pdb
+C:\Development\Education\MathPro\MathBase\Bin\Debug\MathBase.dll
+C:\Development\Education\MathPro\MathBase\Bin\Debug\MathBase.pdb
+C:\Development\Education\MathPro\MathBase\obj\Debug\MathBase.dll
+C:\Development\Education\MathPro\MathBase\obj\Debug\MathBase.pdb

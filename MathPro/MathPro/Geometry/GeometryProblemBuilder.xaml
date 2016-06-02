@@ -1,0 +1,109 @@
+﻿<phone:PhoneApplicationPage xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"  
+    x:Class="MathPro.Geometry.GeometryProblemBuilder"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Landscape" Orientation="Landscape"
+    mc:Ignorable="d" d:DesignHeight="480" d:DesignWidth="800"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/MathPro;component/Images/chalkboard-background.jpg" Stretch="UniformToFill" />
+        </Grid.Background>
+        
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <toolkit:WrapPanel>
+            <TextBlock  Margin="12,0,0,0" Foreground="White" Text="Please enter points below "></TextBlock>
+                <ListBox Name="PointsList" ScrollViewer.HorizontalScrollBarVisibility="Auto"  Width="780" Height="200">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+                <TextBlock Name="txtAdded" Margin="12,0,0,0" Width="780" Foreground="White" Text="Added:"></TextBlock>
+                <toolkit:WrapPanel> 
+                <TextBlock Margin="12,0,0,0" Foreground="White" Text="Transformation Type"></TextBlock>
+                <toolkit:WrapPanel Width="780">
+                        <RadioButton  Foreground="White"  Height="70" Checked="TranslationTypeChanged" FontSize="15" Name="rdReflection" Content="Reflection"></RadioButton>
+                        <RadioButton Foreground="White" Height="70" Checked="TranslationTypeChanged" FontSize="15" Name="rdRotation" Content="Rotation"></RadioButton>
+                        <RadioButton Foreground="White" Height="70" Checked="TranslationTypeChanged" FontSize="15" Name="rdTranslation" Content="Translation"></RadioButton>
+                        <RadioButton Foreground="White" Height="70" Checked="TranslationTypeChanged" FontSize="15" Name="rdEnlargement" Content="Enlargement"></RadioButton>
+                </toolkit:WrapPanel>
+                </toolkit:WrapPanel>
+                
+                <toolkit:WrapPanel Name="panelReflection"> 
+                <TextBlock Margin="12,0,0,0" Foreground="White" Text="ReflectionType"></TextBlock>
+                <toolkit:WrapPanel Width="780" Height="50">
+                        <RadioButton Foreground="White" Name="rdXAxis" Height="70" FontSize="15" Content="X-Axis"></RadioButton>
+                        <RadioButton Foreground="White" Name="rdYAxis" Height="70" FontSize="15" Content="Y-Axis"></RadioButton>
+                        <RadioButton Foreground="White" Name="rdXequalsY" Height="70" FontSize="15" Content="X = Y"></RadioButton>
+
+                </toolkit:WrapPanel>
+                </toolkit:WrapPanel>
+                <toolkit:WrapPanel Name="panelRotation">
+                <Grid  Width="400"> 
+                 <TextBlock Margin="12,0,0,0" Foreground="White" Text=" Rotation Angle"></TextBlock>
+                <toolkit:WrapPanel Width="780">
+                            <RadioButton Foreground="White" Name="rdNinty" Height="70" FontSize="15" Content="90"></RadioButton>
+                            <RadioButton Foreground="White" Name="rdHundredAndEighty" Height="70" FontSize="15" Content="180"></RadioButton>
+                    
+
+                </toolkit:WrapPanel>
+                </Grid>
+
+                <Grid  Width="350">
+                    <TextBlock Margin="12,0,0,0" Foreground="White" Text=" Rotation Direction"></TextBlock>
+                    <toolkit:WrapPanel Width="780">
+                            <RadioButton Foreground="White" Name="rdClockwise" Height="70" FontSize="15" Content="Clockwise"></RadioButton>
+                            <RadioButton Foreground="White" Name="rdAntiClockwise" Height="70" FontSize="15" Content="Anti-clockwise"></RadioButton>
+
+                    </toolkit:WrapPanel>
+                </Grid> 
+                </toolkit:WrapPanel>
+                <toolkit:WrapPanel Width="750" Name="panelEnlargement">
+                    <TextBlock Margin="12,0,0,0" Foreground="White" Text="Enlargement Factor"></TextBlock>
+                    <TextBox InputScope="Number" BorderBrush="White" Name="txtEnlargement" Height="70" Width="80" ></TextBox>
+                </toolkit:WrapPanel>
+                
+                <Grid> 
+                <toolkit:WrapPanel Width="750" Height="80" Name="panelTranslation">
+                        <TextBlock Margin="12,0,0,0" Width="750" Foreground="White" Text="Translation Units"></TextBlock>
+                        <TextBlock Margin="12,0,0,0" Foreground="White" Text="Vertical"></TextBlock>
+                    <TextBox InputScope="Number" BorderBrush="White" Name="txtVertical" Height="70" Width="80" ></TextBox>
+                    <TextBlock  Margin="12,0,0,0" Foreground="White" Text="Horizontal"></TextBlock>
+                        <TextBox InputScope="Number" BorderBrush="White" Name="txtHorizontal" Height="70" Width="80" ></TextBox>
+                </toolkit:WrapPanel>
+                </Grid>
+                <Button BorderBrush="White" Foreground="White" Name="btnAdd" Click="btnAdd_Click" Content="AddTransformation"/>
+                <Button BorderBrush="White" Foreground="White" Name="btnScetch" Click="btnScetch_Click" Content="Plot"/>
+            </toolkit:WrapPanel>
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
